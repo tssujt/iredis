@@ -5,6 +5,10 @@
 - Feature: you can use <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel a blocking
   command like `BLPOP`.
 - Test: IRedis now tested under ubuntu-latest (before is ubuntu-16.04)
+- Add new command group: `bitmap`.
+- Support new command in Redis:
+  - `ACL GETUSER`
+  - `ACL HELP`
 
 ### 1.9.4
 
