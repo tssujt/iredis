@@ -151,6 +151,7 @@ VALID_NODE = r"\w+"
 NUM = r"\d+"
 NNUM = r"-?\+?\(?\[?(\d+|inf)"  # number cloud be negative
 _FLOAT = r"-?(\d|\.|e)+"
+DOUBLE = r"\d*(\.\d+)?"
 LEXNUM = r"(\[\w+)|(\(\w+)|(\+)|(-)"
 
 SLOT = fr"(?P<slot>{VALID_SLOT})"
@@ -229,7 +230,7 @@ SHARP_OFFSET = f"(?P<offset>\#?{NUM})"  # for bitfield command
 MIN = fr"(?P<min>{NNUM})"
 MAX = fr"(?P<max>{NNUM})"
 POSITION = fr"(?P<position>{NNUM})"
-TIMEOUT = fr"(?P<timeout>{NUM})"
+TIMEOUT = fr"(?P<timeout>{DOUBLE})"
 SCORE = fr"(?P<score>{_FLOAT})"
 LEXMIN = fr"(?P<lexmin>{LEXNUM})"
 LEXMAX = fr"(?P<lexmax>{LEXNUM})"
