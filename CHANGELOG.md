@@ -10,6 +10,7 @@
   - `ACL GETUSER`
   - `ACL HELP`
   - `BLMOVE`
+  - `CLIENT INFO`
 
 ### 1.9.4
 
