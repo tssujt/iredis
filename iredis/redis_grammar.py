@@ -130,6 +130,7 @@ CONST = {
     "withmatchlen_const": "WITHMATCHLEN",
     "strings_const": "STRINGS",
     "rank_const": "RANK",
+    "lr_const": "LEFT RIGHT",
 }
 
 
@@ -329,6 +330,8 @@ MINMATCHLEN_CONST = fr"(?P<minmatchlen_const>{c('minmatchlen_const')})"
 WITHMATCHLEN_CONST = fr"(?P<withmatchlen_const>{c('withmatchlen_const')})"
 STRINGS_CONST = fr"(?P<strings_const>{c('strings_const')})"
 RANK_CONST = fr"(?P<rank_const>{c('rank_const')})"
+
+LR_CONST = fr"(?P<lr_const>{c('lr_const')})"
 
 command_grammar = compile(COMMAND)
 
@@ -608,6 +611,10 @@ GRAMMAR = {
             (\s+ {MAXLEN} \s+ {LEN})
         )*
         \s*""",
+    "command_key_key_lr_lr_timeout": fr"""
+        \s+ {KEY} \s+ {KEY}
+        \s+ {LR_CONST} \s+ {LR_CONST}
+        \s+ {TIMEOUT} \s*""",
 }
 
 pipeline = r"(?P<shellcommand>\|.*)?"
